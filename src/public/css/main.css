@@ -1,0 +1,55 @@
+#main {
+  position: relative;
+  max-width: unset;
+}
+
+#overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  background-color: rgba(0, 0, 0, 0);
+  opacity: 0;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#overlay.active {
+  width: 100vw;
+  height: 100vh;
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#noti_wrapper {
+  position: relative;
+  display: block;
+  width: 0;
+  height: 0;
+  background-color: white;
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#overlay.active #noti_wrapper {
+  width: 400px;
+  height: 280px;
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+#overlay.active h3 {
+  text-align: center;
+  color: black;
+  margin: 50px 0 70px;
+  display: inline-block;
+  width: 100%;
+}
+
+#overlay.active img {
+  display: block;
+  margin: 0 auto;
+}

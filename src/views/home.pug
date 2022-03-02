@@ -1,0 +1,20 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Video-Control-Web
+    link(rel="stylesheet", href="https://unpkg.com/mvp.css")
+    link(rel="stylesheet", href="../public/css/main.css")
+  body 
+    main#main
+      h1 Video Uploader
+      form#video_form(onsubmit="return videoSubmit(event)" method="post" enctype="multipart/form-data")
+        input#upload_video(type="file" name="upload_video")
+        button#upload_button(type="submit") 변환하기
+      div#overlay
+        div#noti_wrapper
+          h3 작업이 진행중입니다.
+          img(src="../public/resources/spinner.gif" width="50" height="50")
+    script(src="../public/js/app.js")
